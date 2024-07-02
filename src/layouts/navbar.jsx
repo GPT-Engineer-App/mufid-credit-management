@@ -16,7 +16,7 @@ import { navItems } from "../App";
 const Layout = () => {
   return (
     <div className="flex min-h-screen w-full flex-col">
-      <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 justify-between">
+      <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-blue-500 text-white border-yellow-500 px-4 md:px-6 justify-between">
         <DesktopNav />
         <MobileNav />
         <UserMenu />
@@ -34,7 +34,7 @@ const DesktopNav = () => (
       to="/"
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
-      <Package2 className="h-6 w-6" />
+      <Package2 className="h-6 w-6 text-white" />
       <span className="sr-only">Acme Inc</span>
     </NavItem>
     {navItems.map((item) => (
@@ -48,8 +48,8 @@ const DesktopNav = () => (
 const MobileNav = () => (
   <Sheet>
     <SheetTrigger asChild>
-      <Button variant="outline" size="icon" className="shrink-0 md:hidden">
-        <Menu className="h-5 w-5" />
+      <Button variant="outline" size="icon" className="shrink-0 md:hidden text-white">
+        <Menu className="h-5 w-5 text-white" />
         <span className="sr-only">Toggle navigation menu</span>
       </Button>
     </SheetTrigger>
@@ -59,7 +59,7 @@ const MobileNav = () => (
           to="/"
           className="flex items-center gap-2 text-lg font-semibold"
         >
-          <Package2 className="h-6 w-6" />
+          <Package2 className="h-6 w-6 text-white" />
           <span className="sr-only">Acme Inc</span>
         </NavItem>
         {navItems.map((item) => (
@@ -80,8 +80,8 @@ const MobileNav = () => (
 const UserMenu = () => (
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
-      <Button variant="secondary" size="icon" className="rounded-full">
-        <CircleUser className="h-5 w-5" />
+      <Button variant="secondary" size="icon" className="rounded-full text-white">
+        <CircleUser className="h-5 w-5 text-white" />
         <span className="sr-only">Toggle user menu</span>
       </Button>
     </DropdownMenuTrigger>
@@ -103,8 +103,8 @@ const NavItem = ({ to, children, className }) => (
       cn(
         "transition-colors",
         isActive
-          ? "text-foreground"
-          : "text-muted-foreground hover:text-foreground",
+          ? "text-white"
+          : "text-white hover:text-gray-300",
         className,
       )
     }
