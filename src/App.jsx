@@ -1,10 +1,16 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Home } from "lucide-react";
+import { Home, User, Briefcase, Shield, Settings } from "lucide-react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./layouts/sidebar";
 import Index from "./pages/Index.jsx";
+import Visitor from "./pages/Visitor.jsx";
+import Client from "./pages/Client.jsx";
+import Exploitation from "./pages/Exploitation.jsx";
+import Administration from "./pages/Administration.jsx";
+import SystemAdmin from "./pages/SystemAdmin.jsx";
+
 const queryClient = new QueryClient();
 
 export const navItems = [
@@ -13,7 +19,31 @@ export const navItems = [
     to: "/",
     icon: <Home className="h-4 w-4" />,
   },
-  // Add more navigation items as needed
+  {
+    title: "Visitor",
+    to: "/visitor",
+    icon: <User className="h-4 w-4" />,
+  },
+  {
+    title: "Client",
+    to: "/client",
+    icon: <Briefcase className="h-4 w-4" />,
+  },
+  {
+    title: "Direction d'Exploitation",
+    to: "/exploitation",
+    icon: <Shield className="h-4 w-4" />,
+  },
+  {
+    title: "Conseil d'Administration",
+    to: "/administration",
+    icon: <Settings className="h-4 w-4" />,
+  },
+  {
+    title: "Administrateur Système",
+    to: "/system-admin",
+    icon: <Settings className="h-4 w-4" />,
+  },
 ];
 
 const App = () => {
@@ -25,7 +55,11 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Index />} />
-              {/* Add more routes here as needed */}
+              <Route path="visitor" element={<Visitor />} />
+              <Route path="client" element={<Client />} />
+              <Route path="exploitation" element={<Exploitation />} />
+              <Route path="administration" element={<Administration />} />
+              <Route path="system-admin" element={<SystemAdmin />} />
             </Route>
           </Routes>
         </Router>
