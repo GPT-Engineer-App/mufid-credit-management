@@ -67,7 +67,12 @@ const MobileNav = () => (
             {item.title}
           </NavItem>
         ))}
+        <NavItem to="/register">Register</NavItem>
+        <NavItem to="/login">Login</NavItem>
       </nav>
+      <footer className="mt-auto p-4 text-center text-xs">
+        © 2024 Otniel FB
+      </footer>
     </SheetContent>
   </Sheet>
 );
