@@ -10,6 +10,8 @@ import Client from "./pages/Client.jsx";
 import Exploitation from "./pages/Exploitation.jsx";
 import Administration from "./pages/Administration.jsx";
 import SystemAdmin from "./pages/SystemAdmin.jsx";
+import Register from "./pages/Register.jsx";
+import Login from "./pages/Login.jsx";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +62,8 @@ const App = () => {
               <Route path="exploitation" element={<Exploitation />} />
               <Route path="administration" element={<Administration />} />
               <Route path="system-admin" element={<SystemAdmin />} />
+              <Route path="register" element={<Register />} />
+              <Route path="login" element={<Login />} />
             </Route>
           </Routes>
         </Router>

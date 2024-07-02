@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const Client = () => {
   return (
@@ -9,6 +10,10 @@ const Client = () => {
         </CardHeader>
         <CardContent>
           <p>Welcome, Client! Here you can manage your account and access our services.</p>
+          <div className="mt-4 space-y-2">
+            <Button variant="outline">Gérer Profil</Button>
+            <Button variant="outline">Gérer Demande</Button>
+          </div>
         </CardContent>
       </Card>
     </div>
