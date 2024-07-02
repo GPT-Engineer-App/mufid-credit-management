@@ -48,8 +48,13 @@ const Sidebar = () => (
               {item.title}
             </SidebarNavLink>
           ))}
+          <SidebarNavLink to="/register">Register</SidebarNavLink>
+          <SidebarNavLink to="/login">Login</SidebarNavLink>
         </nav>
       </div>
+      <footer className="mt-auto p-4 text-center text-xs">
+        © 2024 Otniel FB
+      </footer>
     </div>
   </div>
 );
@@ -76,7 +81,12 @@ const MobileSidebar = () => (
             {item.title}
           </SidebarNavLink>
         ))}
+        <SidebarNavLink to="/register">Register</SidebarNavLink>
+        <SidebarNavLink to="/login">Login</SidebarNavLink>
       </nav>
+      <footer className="mt-auto p-4 text-center text-xs">
+        © 2024 Otniel FB
+      </footer>
     </SheetContent>
   </Sheet>
 );
