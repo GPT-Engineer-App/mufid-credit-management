@@ -7,11 +7,11 @@ const Index = () => {
       <h1 className="text-3xl font-bold">Welcome to MFC</h1>
       <p>Your trusted partner in banking and credit management.</p>
       <div className="mt-4 space-x-2">
-        <Button variant="primary" as={Link} to="/register">
-          Register
+        <Button asChild>
+          <Link to="/register">Register</Link>
         </Button>
-        <Button variant="outline" as={Link} to="/login">
-          Login
+        <Button variant="outline" asChild>
+          <Link to="/login">Login</Link>
         </Button>
       </div>
     </div>
